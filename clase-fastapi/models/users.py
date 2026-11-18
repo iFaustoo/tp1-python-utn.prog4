@@ -5,7 +5,12 @@ from typing import List
 class User(BaseModel):
     id: int
     name: str
-    is_active: bool = True  # default value, field becomes optional
+    is_active: bool = True
+
+
+class UserUpdate(BaseModel):
+    name: str
+    is_active: bool
 
 
 class GetUsersResponse(BaseModel):
